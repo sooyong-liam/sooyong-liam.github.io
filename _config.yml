@@ -11,7 +11,7 @@ url: "https:/sooyong-liam.github.io"
 # Theme
 # ────────────────────────────────────────────────────────────────────
 theme: null
-remote_theme: pages-themes/modernist@v0.2.0
+remote_theme: mikemcquaid/just-the-docs@v0.4.0
 plugins:
   - jekyll-feed            # RSS
   - jekyll-sitemap         # sitemap.xml
