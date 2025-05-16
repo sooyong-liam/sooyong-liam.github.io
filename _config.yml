@@ -1,13 +1,13 @@
 # ────────────────────────────────────────────────────────────────────
 # Site settings
 # ────────────────────────────────────────────────────────────────────
-title: "My Math Academy"
-description: "Courses · Tutorials · Exercises"
-baseurl: ""            # change to "/<repo>" if not serving from user/org root
-url: "https://<your-username>.github.io"
+title: My Math Academy
+description: Courses · Tutorials · Exercises
+baseurl: ""            # e.g. "/my-repo" if not serving from user/org root
+url: https://<your-username>.github.io
 
 # ────────────────────────────────────────────────────────────────────
-# Theme: pin to the last GH-Pages–compatible version
+# Theme: pin to a GitHub Pages–compatible release
 # ────────────────────────────────────────────────────────────────────
 remote_theme: mmistakes/minimal-mistakes@4.24.0
 theme: null
@@ -20,13 +20,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-mathjax
-  - jekyll-include-cache   # this provides the include_cached tag
+  - jekyll-include-cache
 
 # ────────────────────────────────────────────────────────────────────
 # Markdown & MathJax
 # ────────────────────────────────────────────────────────────────────
 markdown: kramdown
 kramdown:
+  parse_block_html: true
   math_engine: mathjax
 mathjax:
   version: "3.0"
@@ -50,4 +51,42 @@ collections:
 # Navigation
 # ────────────────────────────────────────────────────────────────────
 navbar:
-  title: "My Math Academy
+  title: My Math Academy
+  items:
+    - title: Courses
+      url: /courses/
+    - title: Blog
+      url: /blog/
+    - title: Exercises
+      url: /exercises/
+    - title: About
+      url: /about/
+
+# ────────────────────────────────────────────────────────────────────
+# Defaults
+# ────────────────────────────────────────────────────────────────────
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: single
+      author: Your Name
+  - scope:
+      type: courses
+    values:
+      layout: single
+  - scope:
+      type: exercises
+    values:
+      layout: single
+
+# ────────────────────────────────────────────────────────────────────
+# Build settings
+# ────────────────────────────────────────────────────────────────────
+permalink: pretty
+timezone: America/New_York
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
