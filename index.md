@@ -11,17 +11,17 @@ hero:
 
 # Three feature cards
 features:
-  - title: "📚 Courses"
+  - title: "Courses"
     description: "Self-paced modules built around examples→theorem→proof."
     url: /courses/
     icon: book
 
-  - title: "🖋 Blog"
+  - title: "Blog"
     description: "Deep dives & updates on stochastic processes, ML, and more."
     url: /blog/
     icon: pencil-alt
 
-  - title: "🧩 Exercises"
+  - title: "Exercises"
     description: "Practice problems with hints & full solutions."
     url: /exercises/
     icon: puzzle-piece
