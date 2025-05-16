@@ -1,7 +1,24 @@
 ---
 layout: home
-title: "sooyong-liam"
+title: "sooyong-liam"      # still needed for <head>
+hero:
+  title: "Welcome to My Math Academy"
+  image: "/assets/images/math-banner.jpg"
+features:
+  - title: "Courses"
+    description: "Self-paced modules"
+    url: /courses/
+    icon: book
+  - title: "Blog"
+    description: "Deep dives & updates"
+    url: /blog/
+    icon: pencil-alt
+  - title: "Exercises"
+    description: "Practice problems"
+    url: /exercises/
+    icon: puzzle-piece
 ---
+
 
 If you still see this text instead of cards, check:
 
