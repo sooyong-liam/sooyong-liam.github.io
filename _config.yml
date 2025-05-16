@@ -3,24 +3,24 @@
 # ────────────────────────────────────────────────────────────────────
 title: "My Math Academy"
 description: "Courses · Tutorials · Exercises"
-# If you're serving from a repo (not a custom domain), set:
-baseurl: ""            # e.g. "/my-repo" if not using a custom domain
+baseurl: ""            # change to "/<repo>" if not serving from user/org root
 url: "https://<your-username>.github.io"
 
 # ────────────────────────────────────────────────────────────────────
-# Theme: pull in Minimal Mistakes remotely
+# Theme: pin to the last GH-Pages–compatible version
 # ────────────────────────────────────────────────────────────────────
-remote_theme: mmistakes/minimal-mistakes@4.25.0
-theme: null            # ensures we only use remote_theme
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+theme: null
 
 # ────────────────────────────────────────────────────────────────────
 # Plugins
 # ────────────────────────────────────────────────────────────────────
 plugins:
-  - jekyll-feed       # RSS feed
-  - jekyll-sitemap    # sitemap.xml
-  - jekyll-seo-tag    # SEO meta tags
-  - jekyll-mathjax    # MathJax support
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-mathjax
+  - jekyll-include-cache   # this provides the include_cached tag
 
 # ────────────────────────────────────────────────────────────────────
 # Markdown & MathJax
@@ -28,13 +28,12 @@ plugins:
 markdown: kramdown
 kramdown:
   math_engine: mathjax
-  parse_block_html: true
 mathjax:
   version: "3.0"
   config: "TeX-AMS_HTML"
 
 # ────────────────────────────────────────────────────────────────────
-# Content Collections
+# Collections
 # ────────────────────────────────────────────────────────────────────
 collections:
   courses:
@@ -43,72 +42,12 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  exercises:          # optional: if you want a separate exercises section
+  exercises:
     output: true
     permalink: /exercises/:path/
 
 # ────────────────────────────────────────────────────────────────────
-# Navigation Bar
+# Navigation
 # ────────────────────────────────────────────────────────────────────
 navbar:
-  title: "My Math Academy"
-  logo: /assets/images/logo.svg
-  items:
-    - title: Courses
-      url: /courses/
-    - title: Blog
-      url: /blog/
-    - title: Exercises
-      url: /exercises/
-    - title: About
-      url: /about/
-
-# ────────────────────────────────────────────────────────────────────
-# Defaults per content type
-# ────────────────────────────────────────────────────────────────────
-defaults:
-  # Blog posts
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: single
-      author: "Your Name"
-  # Courses pages
-  - scope:
-      path: ""
-      type: "courses"
-    values:
-      layout: single
-  # Exercises pages
-  - scope:
-      path: ""
-      type: "exercises"
-    values:
-      layout: single
-
-# ────────────────────────────────────────────────────────────────────
-# Exclude files/folders from build
-# ────────────────────────────────────────────────────────────────────
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle
-
-# ────────────────────────────────────────────────────────────────────
-# Build settings
-# ────────────────────────────────────────────────────────────────────
-permalink: pretty
-timezone: America/New_York
-future: true   # allow future-dated posts if you want
-
-# ────────────────────────────────────────────────────────────────────
-# (Optional) Footer settings
-# ────────────────────────────────────────────────────────────────────
-footer:
-  links:
-    - title: "GitHub"
-      url: "https://github.com/<your-username>/<your-repo>"
-    - title: "License"
-      url: "/license/"
+  title: "My Math Academy
