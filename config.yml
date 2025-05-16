@@ -1,0 +1,55 @@
+# _config.yml
+title: “My Math Academy”
+description: “Courses · Tutorials · Exercises”
+baseurl: ""         # or "/repo-name" if not using a custom domain
+url: "https://<your-username>.github.io"
+
+# use the remote theme
+remote_theme: mmistakes/minimal-mistakes@4.25.0
+
+plugins:
+  - jekyll-feed       # for RSS
+  - jekyll-sitemap    # for sitemap.xml
+  - jekyll-mathjax    # for LaTeX support
+
+# Collections for structured content
+collections:
+  courses:
+    output: true
+    permalink: /courses/:path/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Navigation
+navbar:
+  title: "My Math Academy"
+  logo: /assets/images/logo.svg  # optional
+  items:
+    - title: Courses
+      url: /courses/
+    - title: Blog
+      url: /blog/
+    - title: About
+      url: /about/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author: "Your Name"
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "single"
+
+# MathJax configuration (you can tweak)
+mathjax:
+  version: "3.0"
+  config: "TeX-AMS_HTML"
+
+# Theme options (colors, fonts)—you can mostly leave these alone 
+# unless you want to override.
