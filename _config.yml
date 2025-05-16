@@ -4,7 +4,7 @@
 title: "My Math Academy"
 description: "Courses · Tutorials · Exercises"
 baseurl: ""            # change to "/<repo>" if not serving from user/org root
-url: "https://<your-username>.github.io"
+url: "https://sooyong-liam.github.io"
 
 # ────────────────────────────────────────────────────────────────────
 # Theme: pin to the last GH-Pages–compatible version
