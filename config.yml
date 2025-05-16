@@ -1,18 +1,41 @@
-# _config.yml
-title: “My Math Academy”
-description: “Courses · Tutorials · Exercises”
-baseurl: ""         # or "/repo-name" if not using a custom domain
+# ────────────────────────────────────────────────────────────────────
+# Site settings
+# ────────────────────────────────────────────────────────────────────
+title: "My Math Academy"
+description: "Courses · Tutorials · Exercises"
+# If you're serving from a repo (not a custom domain), set:
+baseurl: ""            # e.g. "/my-repo" if not using a custom domain
 url: "https://<your-username>.github.io"
 
-# use the remote theme
+# ────────────────────────────────────────────────────────────────────
+# Theme: pull in Minimal Mistakes remotely
+# ────────────────────────────────────────────────────────────────────
 remote_theme: mmistakes/minimal-mistakes@4.25.0
+theme: null            # ensures we only use remote_theme
 
+# ────────────────────────────────────────────────────────────────────
+# Plugins
+# ────────────────────────────────────────────────────────────────────
 plugins:
-  - jekyll-feed       # for RSS
-  - jekyll-sitemap    # for sitemap.xml
-  - jekyll-mathjax    # for LaTeX support
+  - jekyll-feed       # RSS feed
+  - jekyll-sitemap    # sitemap.xml
+  - jekyll-seo-tag    # SEO meta tags
+  - jekyll-mathjax    # MathJax support
 
-# Collections for structured content
+# ────────────────────────────────────────────────────────────────────
+# Markdown & MathJax
+# ────────────────────────────────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  parse_block_html: true
+mathjax:
+  version: "3.0"
+  config: "TeX-AMS_HTML"
+
+# ────────────────────────────────────────────────────────────────────
+# Content Collections
+# ────────────────────────────────────────────────────────────────────
 collections:
   courses:
     output: true
@@ -20,36 +43,72 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  exercises:          # optional: if you want a separate exercises section
+    output: true
+    permalink: /exercises/:path/
 
-# Navigation
+# ────────────────────────────────────────────────────────────────────
+# Navigation Bar
+# ────────────────────────────────────────────────────────────────────
 navbar:
   title: "My Math Academy"
-  logo: /assets/images/logo.svg  # optional
+  logo: /assets/images/logo.svg
   items:
     - title: Courses
       url: /courses/
     - title: Blog
       url: /blog/
+    - title: Exercises
+      url: /exercises/
     - title: About
       url: /about/
 
+# ────────────────────────────────────────────────────────────────────
+# Defaults per content type
+# ────────────────────────────────────────────────────────────────────
 defaults:
+  # Blog posts
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "single"
+      layout: single
       author: "Your Name"
+  # Courses pages
   - scope:
       path: ""
       type: "courses"
     values:
-      layout: "single"
+      layout: single
+  # Exercises pages
+  - scope:
+      path: ""
+      type: "exercises"
+    values:
+      layout: single
 
-# MathJax configuration (you can tweak)
-mathjax:
-  version: "3.0"
-  config: "TeX-AMS_HTML"
+# ────────────────────────────────────────────────────────────────────
+# Exclude files/folders from build
+# ────────────────────────────────────────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
 
-# Theme options (colors, fonts)—you can mostly leave these alone 
-# unless you want to override.
+# ────────────────────────────────────────────────────────────────────
+# Build settings
+# ────────────────────────────────────────────────────────────────────
+permalink: pretty
+timezone: America/New_York
+future: true   # allow future-dated posts if you want
+
+# ────────────────────────────────────────────────────────────────────
+# (Optional) Footer settings
+# ────────────────────────────────────────────────────────────────────
+footer:
+  links:
+    - title: "GitHub"
+      url: "https://github.com/<your-username>/<your-repo>"
+    - title: "License"
+      url: "/license/"
