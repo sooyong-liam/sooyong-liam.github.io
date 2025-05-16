@@ -1,24 +1,28 @@
 ---
 layout: home
-title: "sooyong-liam"      # still needed for <head>
+title: "sooyong-liam"
+
+# this block must start at line 1 with exactly three hyphens, no leading spaces!
+
 hero:
-  title: "Welcome to My Math Academy"
-  image: "/assets/images/math-banner.jpg"
-features:
+  title: "Dive into our curated math content"
+  # you can omit `image:` if you just want a solid background color
+  image: "/assets/images/math-hero.jpg"
+
+sections:
   - title: "Courses"
     description: "Self-paced modules"
-    url: /courses/
+    url: /courses/       # ← Note: use `url:`, not `link:`
     icon: book
   - title: "Blog"
     description: "Deep dives & updates"
-    url: /blog/
+    url: /blog/          # ← again, `url:` here
     icon: pencil-alt
   - title: "Exercises"
     description: "Practice problems"
     url: /exercises/
     icon: puzzle-piece
 ---
-
 
 If you still see this text instead of cards, check:
 
