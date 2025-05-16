@@ -1,13 +1,15 @@
 ---
 layout: default
-title: My Math Academy
+title: "Welcome to My Math Academy"
 ---
 
-![banner](/assets/images/math-hero.jpg)
+![banner](/assets/images/banner.jpg){: style="width:100%; height:auto; margin-bottom: 1.5rem;" }
 
-# Welcome to My Math Academy
+# Dive into Curated Math Content
 
-A hub for:
-- 📚 [Courses](/courses/)
-- 🖋 [Blog](/blog/)
-- 🧩 [Exercises](/exercises/)
+A one-stop hub for self-paced math learning:
+
+| 📚 **Courses**                     | 🖋 **Blog**                          | 🧩 **Exercises**                   |
+| --------------------------------- | ------------------------------------ | --------------------------------- |
+| [Explore modules →](/courses/)    | [Read deep dives →](/blog/)         | [Practice problems →](/exercises/) |
+
