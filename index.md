@@ -5,7 +5,6 @@ title: "My Math Academy"
 # Hero banner
 hero:
   title: "Welcome to My Math Academy"
-  image: "/assets/images/math-hero.jpg"   # full-width banner image
   height: "400px"                         # makes it nice and tall
   overlay_opacity: 0.6                    # dims the photo a bit
   overlay_color: "#000000"
