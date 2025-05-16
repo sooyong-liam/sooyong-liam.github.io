@@ -1,6 +1,5 @@
 ---
 layout: home
-title: "sooyong-liam"
 
 # this block must start at line 1 with exactly three hyphens, no leading spaces!
 
