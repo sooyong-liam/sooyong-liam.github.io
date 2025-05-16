@@ -1,5 +1,6 @@
 title: My Math Academy
 author: Your Name
+theme: default
 description: Courses · Tutorials · Exercises
 plugins:
   - jekyll-feed
