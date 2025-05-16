@@ -1,6 +1,6 @@
 title: My Math Academy
-description: “Courses · Tutorials · Exercises”
+author: Your Name
+description: Courses · Tutorials · Exercises
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-permalink: pretty
