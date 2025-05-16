@@ -1,15 +1,22 @@
 ---
 layout: home
-title: "Welcome!"
+title: "sooyong-liam"
 hero:
-  title: "My Math Academy"
-  image: /assets/images/math-hero.jpg
-  tagline: "Courses · Tutorials · Exercises"
+  title: "Dive into our curated math content"
+  image: "/assets/images/math-hero.jpg"
 sections:
   - title: "Courses"
+    description: "self-paced modules"
     link: /courses/
+    icon: book
   - title: "Blog"
+    description: "deep dives & updates"
     link: /blog/
+    icon: pencil
+  - title: "Exercises"
+    description: "practice problems"
+    link: /exercises/
+    icon: puzzle-piece
 ---
 
 *Dive into our curated math content:*
