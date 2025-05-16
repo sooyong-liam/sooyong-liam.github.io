@@ -1,6 +1,5 @@
 title: My Math Academy
 description: “Courses · Tutorials · Exercises”
-theme: jekyll-theme-cayman     # or minima, jekyll-theme-primer, etc.
 plugins:
   - jekyll-feed
   - jekyll-sitemap
