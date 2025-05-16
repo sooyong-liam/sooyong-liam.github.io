@@ -1,13 +1,13 @@
 # ────────────────────────────────────────────────────────────────────
 # Site settings
 # ────────────────────────────────────────────────────────────────────
-title: My Math Academy
-description: Courses · Tutorials · Exercises
-baseurl: ""            # e.g. "/my-repo" if not serving from user/org root
-url: https://<your-username>.github.io
+title: "My Math Academy"
+description: "Courses · Tutorials · Exercises"
+baseurl: ""            # change to "/<repo>" if not serving from user/org root
+url: "https://<your-username>.github.io"
 
 # ────────────────────────────────────────────────────────────────────
-# Theme: pin to a GitHub Pages–compatible release
+# Theme: pin to the last GH-Pages–compatible version
 # ────────────────────────────────────────────────────────────────────
 remote_theme: mmistakes/minimal-mistakes@4.24.0
 theme: null
@@ -20,14 +20,13 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-mathjax
-  - jekyll-include-cache
+  - jekyll-include-cache   # this provides the include_cached tag
 
 # ────────────────────────────────────────────────────────────────────
 # Markdown & MathJax
 # ────────────────────────────────────────────────────────────────────
 markdown: kramdown
 kramdown:
-  parse_block_html: true
   math_engine: mathjax
 mathjax:
   version: "3.0"
@@ -51,7 +50,7 @@ collections:
 # Navigation
 # ────────────────────────────────────────────────────────────────────
 navbar:
-  title: My Math Academy
+  title: "My Math Academy"
   items:
     - title: Courses
       url: /courses/
@@ -70,7 +69,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author: Your Name
+      author: "Your Name"
   - scope:
       type: courses
     values:
@@ -81,7 +80,7 @@ defaults:
       layout: single
 
 # ────────────────────────────────────────────────────────────────────
-# Build settings
+# Build
 # ────────────────────────────────────────────────────────────────────
 permalink: pretty
 timezone: America/New_York
